@@ -1,0 +1,68 @@
+openapi: 3.0.0
+info:
+  title: AI Sova API
+  description: This is the API documentation for the AI Sova project. It provides details on the available endpoints, request and response formats, authentication requirements, and usage examples.
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:3000/api/v1
+    description: Local development server
+
+paths:
+  /data:
+    get:
+      summary: Retrieve data
+      description: Fetches data from the server.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: string
+        '401':
+          description: Unauthorized
+      security:
+        - apiKeyAuth: []
+
+    post:
+      summary: Update data
+      description: Updates data on the server.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: array
+                  items:
+                    type: string
+      responses:
+        '200':
+          description: Successful update
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+      security:
+        - apiKeyAuth: []
+
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+
+tags:
+  - name: Data
+    description: Operations related to data management
+
+
