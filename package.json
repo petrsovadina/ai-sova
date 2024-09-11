@@ -1,9 +1,8 @@
 {
-  "name": "shadcn-nextjs-boilerplate",
-  "version": "2.1.1",
+  "name": "ai-sova",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "init": "npm install && npx shadcn@latest add --all",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -93,8 +92,6 @@
     "react-custom-scrollbars-2": "^4.5.0",
     "react-day-picker": "^8.10.1",
     "react-dom": "18.3.1",
-    "react-github-btn": "^1.4.0",
-    "react-github-button": "^0.1.11",
     "react-hook-form": "^7.53.0",
     "react-icons": "^5.2.1",
     "react-is": "^18.3.1",
@@ -105,7 +102,6 @@
     "react-to-print": "^2.15.1",
     "recharts": "^2.12.7",
     "remark-gfm": "^4.0.0",
-    "shadcn-ui": "^0.2.3",
     "sonner": "^1.5.0",
     "stripe": "^15.8.0",
     "swr": "^2.2.5",

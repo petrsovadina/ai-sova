@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation';
 import { getUserDetails, getUser } from '@/utils/supabase/queries';
 import { createClient } from '@/utils/supabase/server';
 
-export default async function Account() {
+export default async function AISovaDashboardMain() {
   const supabase = createClient();
   const [user, userDetails] = await Promise.all([
     getUser(supabase),

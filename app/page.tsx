@@ -2,7 +2,8 @@ import { getUser } from '@/utils/supabase/queries';
 import { redirect } from 'next/navigation';
 import { createClient } from '@/utils/supabase/server';
 
-export default async function Dashboard() {
+// Hlavní stránka AI Sova aplikace
+export default async function AISovaDashboard() {
   const supabase = createClient();
   const [user] = await Promise.all([getUser(supabase)]);
 
